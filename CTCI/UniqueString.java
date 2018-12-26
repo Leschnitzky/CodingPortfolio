@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class UniqueString {
+
+    // Function to check if all of the characters in the String are unique
     public static boolean uniqueChecker(String s){
         HashMap<Character,Integer> map = new HashMap<>();
 
