@@ -9,8 +9,15 @@
 def arrayManipulation(n, queries):
     zeroes = [0] * (n+2)
     for query in queries:
-        zeroes[query[0]] += query[2];
-        zeroes[query[1] + 1] -= query[2];
+        zeroes[query[0]] += query[2]
+        zeroes[query[1] + 1] -= query[2]
 
     sum_value = 0
     max_value = 0
+
+
+    for value in zeroes:
+        sum_value += value
+        if(sum_value > max_value): max_value = sum_value
+
+    return max_value
