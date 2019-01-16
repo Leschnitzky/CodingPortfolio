@@ -1,4 +1,4 @@
-
+from collections import Counter
 
 # Via HackerRank - ArrayManipulation
 
@@ -21,3 +21,14 @@ def arrayManipulation(n, queries):
         if(sum_value > max_value): max_value = sum_value
 
     return max_value
+
+
+    #Using Counter to count how many variables are in value
+    def using_counter(arr, value):
+        counter = Counter()
+        
+        for mem in arr:
+            counter[mem] += 1
+        
+        return counter[value]
+
